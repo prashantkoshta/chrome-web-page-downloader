@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<script src='js/popup.js'></script>
+</head>
+<body>
+	<div id="sec-filter">
+		<input type=text id=filter placeholder=Filter value="(.css)+|(.js)+|(.html)+|(.png)+|(.gif)+(.jpg)+|(.jpeg)+">
+		<input type=checkbox id=regex checked>
+		<label for=regex>Regex</label><br>
+		<button id=download0>Download All!</button>
+		<table id=links>
+		  <tr>
+			<th><input type=checkbox checked id=toggle_all></th>
+			<th align=left>URL</th>
+		  </tr>
+		</table>
+		<button id=download1>Download All!</button>
+	</div>
+	<div id="sec-text"></div>
+	<div id="downloaded-links"></div>
+	<div id="page-id"></div>
+</body>
+</html>
