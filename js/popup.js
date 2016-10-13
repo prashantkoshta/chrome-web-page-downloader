@@ -80,7 +80,7 @@ function downloadCheckedLinks() {
    for(var j=0;j<jsFiles.length;j++){
 		document.getElementById("aa"+jsFiles[j]).click();
    }
-   console.log("#downloadCheckedLinks:",pageContent);
+   //console.log("#downloadCheckedLinks:",pageContent);
    pageFileContentDownload(pageContent);
    downloadLinkFile(plainTxt);
 }
@@ -157,7 +157,7 @@ function filterLinks() {
 // injected into all frames of the active tab, so this listener may be called
 // multiple times.
 chrome.extension.onRequest.addListener(function(obj) {
-  console.log("#popup:addListener",obj);
+  //console.log("#popup:addListener",obj);
   if(!flagSetPageContent){
     pageContent = obj.content;
     flagSetPageContent = true;
