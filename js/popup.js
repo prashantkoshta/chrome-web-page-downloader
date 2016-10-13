@@ -1,6 +1,7 @@
 var allLinks = [];
 var visibleLinks = [];
 var pageContent = "";
+var flagSetPageContent = false;
 
 // Display all visible links.
 function showLinks() {
@@ -79,7 +80,7 @@ function downloadCheckedLinks() {
    for(var j=0;j<jsFiles.length;j++){
 		document.getElementById("aa"+jsFiles[j]).click();
    }
-   
+   console.log("#downloadCheckedLinks:",pageContent);
    pageFileContentDownload(pageContent);
    downloadLinkFile(plainTxt);
 }
@@ -156,8 +157,12 @@ function filterLinks() {
 // injected into all frames of the active tab, so this listener may be called
 // multiple times.
 chrome.extension.onRequest.addListener(function(obj) {
+  console.log("#popup:addListener",obj);
+  if(!flagSetPageContent){
+    pageContent = obj.content;
+    flagSetPageContent = true;
+  }
   var links = obj.link;
-  pageContent = obj.content;
   for (var index in links) {
     allLinks.push(links[index]);
   }

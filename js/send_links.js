@@ -41,7 +41,7 @@ var captureLinks = (function() {
 			pathname = a.pathname.trim();
 			var filename= a.pathname.split('/').pop();	
 			filename = filename.trim();
-			console.log(">>>"+pathname + "\t"+filename);
+			//console.log(">>>"+pathname + "\t"+filename);
 			if(pathname.indexOf("/") != pathname.lastIndexOf("/") 
 				&& filename.lastIndexOf(".") >-1 && filename.lastIndexOf(".") < filename.length){
 				// valid
