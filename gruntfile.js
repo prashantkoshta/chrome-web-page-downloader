@@ -11,7 +11,7 @@ module.exports = function(grunt) {
             archive: 'release/chrome-web-page-downloader.zip'
             },
             files: [
-            {src: ['images/**','js/**','downloadpopup.html','icon.png','manifest.json'], dest: '/'}
+            {src: ['js/**','downloadpopup.html','icon.png','manifest.json'], dest: '/'}
             ]
         }
     }
